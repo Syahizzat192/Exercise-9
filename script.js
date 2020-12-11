@@ -1,5 +1,9 @@
 let solution = document.getElementById("solution");
 let solution1 = document.getElementById("solution1");
+let all = document.getElementById("all");
+let age = document.getElementById("age-button")
+var text = " ";
+var i;
 
 var people = [
 {name: ['Alyssa', 'P.', 'Hacker'], age: 26},
@@ -10,47 +14,34 @@ var people = [
 {name: [ 'Shahan','Haig','Krakirian'], age: 26}
 ];
 
-function fullNameList(){
-  var text = "";
-  var i;
+all.addEventListener("click", function fullNameList() {
 
   for (i=0; i < people.length; i++){
-    text += i+1 + ")" +people[i].name + "<br>";
+    text += i+1 + "-" +people[i].name + "<br>";
 }
 
-  document.getElementById("solution").innerHTML = text;
+  solution.innerHTML = text;
 
-}
+})
 
-let btn = document.getElementById("all");
-btn.addEventListener("click", fullNamelist);
 
-function getAgeFunction() {
+age.addEventListener("click", function getAgeFunction() {
 
   if (document.getElementById("name-input").value == "Alyssa"){
-
     solution1.innerHTML = 26;}
 
   if (document.getElementById("name-input").value == "Ben") {
-
     solution1.innerHTML = 34;}
 
   if (document.getElementById("name-input").value == "Eva") {
-
     solution1.innerHTML = 40;}
 
   if (document.getElementById("name-input").value == "Lem") {
-
     solution1.innerHTML = 45;}
 
   if (document.getElementById("name-input").value == "Louis") {
-
     solution1.innerHTML = 21;}
 
   if (document.getElementById("name-input").value == "Shahan") {
-
     solution1.innerHTML = 26;}
-}
-
-let bton = document.getElementById("age-button");
-bton.addEventListener("click", getAgeFunction);
+})
