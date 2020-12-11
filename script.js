@@ -1,7 +1,6 @@
 let solution = document.getElementById("solution");
 let solution1 = document.getElementById("solution1");
 let all = document.getElementById("all");
-let age = document.getElementById("age-button")
 var text = " ";
 var i;
 
@@ -17,31 +16,33 @@ var people = [
 all.addEventListener("click", function fullNameList() {
 
   for (i=0; i < people.length; i++){
-    text += i+1 + "-" +people[i].name + "<br>";
+    text += i+1 + "-" +people[i].name[0] + " " + people[i].name[1] + " " + people[i].name[2] + "<br>";
 }
 
   solution.innerHTML = text;
 
 })
 
+let age = document.getElementById("age-button")
+let name = document.getElementById("name-input");
 
 age.addEventListener("click", function getAgeFunction() {
 
-  if (document.getElementById("name-input").value == "Alyssa"){
+  if (name.value == "Alyssa"){
     solution1.innerHTML = 26;}
 
-  if (document.getElementById("name-input").value == "Ben") {
+  if (name.value == "Ben") {
     solution1.innerHTML = 34;}
 
-  if (document.getElementById("name-input").value == "Eva") {
+  if (name.value == "Eva") {
     solution1.innerHTML = 40;}
 
-  if (document.getElementById("name-input").value == "Lem") {
+  if (name.value == "Lem") {
     solution1.innerHTML = 45;}
 
-  if (document.getElementById("name-input").value == "Louis") {
+  if (name.value == "Louis") {
     solution1.innerHTML = 21;}
 
-  if (document.getElementById("name-input").value == "Shahan") {
+  if (name.value == "Shahan") {
     solution1.innerHTML = 26;}
 })
